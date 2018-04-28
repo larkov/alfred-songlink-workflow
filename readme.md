@@ -1,5 +1,7 @@
 # song.link url creator workflow for alfredapp
 
+Creates music sharing links for [song.link](https://song.link) so that your friends gets links for whatever music platform they are using.
+
 ![example](song-link.png)
 
 ## Usage
