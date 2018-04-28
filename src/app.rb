@@ -7,6 +7,6 @@ icon = "icon.png"
 
 out = Hash.new
 
-out['items'] = [{"type" => "default", "title" => "song.link url", "icon" => { "path" => icon }, "subtitle" => "https://song.link/#{url}", "arg" => "" }]
+out['items'] = [{"type" => "default", "title" => "song.link url", "icon" => { "path" => icon }, "subtitle" => "https://song.link/#{url}", "arg" => "https://song.link/#{url}" }]
 
 print out.to_json
