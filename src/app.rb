@@ -6,9 +6,8 @@ require "net/http"
 country = ENV["country"] || "US"
 platforms = (ENV["platforms"] || "").split(",").map(&:strip)
 
-url = ARGV.empty? ? `pbpaste` : ARGV.first
+url = ARGV.first.empty? ? `pbpaste` : ARGV.first
 uri = "https://api.song.link/v1-alpha.1/links?userCountry=#{country}&url=#{url}"
-
 response = Net::HTTP.get(URI(uri))
 parsedResponse = JSON.parse(response);
 euid = parsedResponse["entityUniqueId"]
