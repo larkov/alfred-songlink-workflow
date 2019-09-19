@@ -20,7 +20,14 @@ out = {
     "icon" => { "path" => "songlink.png" },
     "valid" => true,
     "subtitle" => parsedResponse["pageUrl"],
-    "arg" => parsedResponse["pageUrl"]
+    "arg" => parsedResponse["pageUrl"],
+    "mods" => {
+      "cmd" => {
+        "valid" => true,
+        "arg" => parsedResponse["pageUrl"],
+        "subtitle" => "Copy to clipboard"
+      }
+    }
   }]
 }
 
@@ -33,6 +40,13 @@ parsedResponse["linksByPlatform"].each do |key, value|
       "icon" => {
         "path" => File.exist?("#{key}.png") ? "#{key}.png" : "songlink.png"
       },
+      "mods" => {
+        "cmd" => {
+          "valid" => true,
+          "arg" => value["url"],
+          "subtitle" => "Copy to clipboard"
+        }
+      }
     }
 
     if value["nativeAppUriDesktop"]
