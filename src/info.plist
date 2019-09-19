@@ -14,7 +14,7 @@
 				<key>destinationuid</key>
 				<string>2BB59790-294E-42B8-BCC5-D784F01B5D04</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -24,9 +24,9 @@
 				<key>destinationuid</key>
 				<string>5CEDA93F-E75E-4044-8121-955EAA0BF053</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>open in browser</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -35,7 +35,7 @@
 	<key>createdby</key>
 	<string>Lari Kovanen</string>
 	<key>description</key>
-	<string>Create a song.ling url from your clipboard</string>
+	<string>Get music stream links from song.link urls.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -57,7 +57,7 @@
 			<key>uid</key>
 			<string>2BB59790-294E-42B8-BCC5-D784F01B5D04</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -66,10 +66,12 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -97,14 +99,14 @@
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>0F46B390-9DD9-4EAE-BBBF-148217867C13</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -127,12 +129,31 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Creates a song.link url from the clipboard.
+	<string>Share music links with your friends that aren't tied to a specific platform or open a music link in your chosen platform.
 
-Share music links with your friends that aren't tied to a specific platform.
+Enter opens the link in your music app or service.
+Cmd-Enter copies link to the clipboard.
 
-Enter copies the song.link url to the clipboard.
-Cmd-Enter open song.link url in your default browser.</string>
+Set country variable to your desired coutry (default US).
+Set platform variable to your music providers, comma separated.
+
+Platforms song.link supports:
+spotify
+itunes
+appleMusic
+youtube
+youtubeMusic
+google
+googleStore
+pandora
+deezer
+tidal
+amazonStore
+amazonMusic
+soundcloud
+napster
+yandex
+spinrilla</string>
 	<key>uidata</key>
 	<dict>
 		<key>0F46B390-9DD9-4EAE-BBBF-148217867C13</key>
@@ -159,8 +180,20 @@ Cmd-Enter open song.link url in your default browser.</string>
 			<integer>230</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>country</key>
+		<string>SE</string>
+		<key>platforms</key>
+		<string>spotify, itunes, appleMusic</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>country</string>
+		<string>platforms</string>
+	</array>
 	<key>version</key>
-	<string>1.1</string>
+	<string>2.1</string>
 	<key>webaddress</key>
 	<string>http://kovanen.se/</string>
 </dict>
