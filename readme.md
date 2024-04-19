@@ -1,3 +1,6 @@
+# Deprecated
+The Song link api is not public anymore so this does not work as intended. Archived Apr 19 2024.
+
 # song.link url creator workflow for alfredapp
 
 Creates music sharing links for [song.link](https://song.link) so that your friends gets links for whatever music platform they are using and shows direct links to your prefered platforms.
